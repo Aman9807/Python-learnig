@@ -1,4 +1,15 @@
-# A program for Dictionary in Python to store student profile information.
+# Question 13: Student Profile Builder (Dictionary Basics)
+#
+# Problem Statement:
+# Build a dynamic student profile dictionary using user input and practice updating dictionary entries.
+#
+# Tasks to complete:
+# 1. Create an empty dictionary `student = {}`.
+# 2. Take user inputs for `"name"`, `"age"`, `"course"`, and `"city"`.
+# 3. Display the formatted profile string.
+# 4. Update the `"city"` entry with a new input and display the updated profile.
+#
+# Write your code below this line:
 
 student = {}
 

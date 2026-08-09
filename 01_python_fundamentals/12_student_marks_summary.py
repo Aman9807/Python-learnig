@@ -1,4 +1,15 @@
-# A program to demonstrate the use of functions in Python for calculating student marks summary.
+# Question 12: Student Marks Summary with Functions
+#
+# Problem Statement:
+# Calculate total marks, average score, and letter grade for a student using helper functions.
+#
+# Tasks to complete:
+# 1. Define `calculate_total(marks)` returning `sum(marks)`.
+# 2. Define `calculate_average(marks)` returning average score.
+# 3. Define `get_grade(average)` returning grade letter ('A', 'B', 'C', or 'F').
+# 4. Collect marks for 3 subjects, compute summary statistics, and display grade.
+#
+# Write your code below this line:
 
 def  calculate_total(marks):
     return sum(marks)

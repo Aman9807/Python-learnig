@@ -34,5 +34,3 @@ print(f"Total amount is :{total_cost}")
 print(f"And highest amount product is :{highest} ")
 
     
-
-    

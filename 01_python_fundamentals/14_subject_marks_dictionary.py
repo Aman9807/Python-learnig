@@ -1,4 +1,17 @@
-# A program to practice dictionary looping in Python to store subject marks for a student.
+# Question 14: Subject Marks Dictionary & Iteration
+#
+# Problem Statement:
+# Store subject names and marks in a dictionary using a loop, iterate through items,
+# and compute total and average marks.
+#
+# Tasks to complete:
+# 1. Prompt user for 3 subject names and marks, storing them in a dictionary.
+# 2. Iterate using `marks.items()` to display each subject and mark.
+# 3. Compute `total` using `sum(marks.values())` and calculate average.
+# 4. Print total, formatted average (`:.2f`), and full dictionary.
+#
+# Write your code below this line:
+
 marks = {}
 for i in range(1, 4):
     subject = input(f"Enter subject {i} name: ")

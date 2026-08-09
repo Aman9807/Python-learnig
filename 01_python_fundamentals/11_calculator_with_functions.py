@@ -1,4 +1,16 @@
-# A program to demonstrate the use of functions in Python by making simple calculator.
+# Question 11: Calculator Using Modular Functions
+#
+# Problem Statement:
+# Build a modular calculator with functions for addition, subtraction, multiplication, and division.
+# Include error handling for division by zero.
+#
+# Tasks to complete:
+# 1. Define separate functions: `add`, `subtract`, `multiply`, `divide`.
+# 2. Implement zero division safety inside `divide(a, b)`.
+# 3. Prompt user for two numbers and an operator (`+`, `-`, `*`, `/`).
+# 4. Execute the matching function and print the result.
+#
+# Write your code below this line:
 
 def add(a , b):
     return a + b

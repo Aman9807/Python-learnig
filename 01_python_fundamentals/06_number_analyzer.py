@@ -1,4 +1,19 @@
-# A program to analyze a number and print whether it is even or odd, positive or negative, and prime or not.
+# Question 6: Number Range Analyzer (Sums & Counts)
+#
+# Problem Statement:
+# Analyze numbers from 1 up to a given positive integer `num`. Calculate the total sum,
+# the sum and count of even numbers, and the sum and count of odd numbers using a loop.
+#
+# Tasks to complete:
+# 1. Take a positive integer `num` from the user.
+# 2. Loop from 1 to `num` and calculate:
+#    - Sum of all numbers.
+#    - Sum and count of even numbers (`i % 2 == 0`).
+#    - Sum and count of odd numbers (`i % 2 != 0`).
+# 3. Display the calculated sums and counts clearly.
+#
+# Write your code below this line:
+
 num = int(input("Enter a number to analyze:\n"))
 sum =0
 sum_even = 0
