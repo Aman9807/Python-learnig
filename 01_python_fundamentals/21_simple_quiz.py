@@ -55,7 +55,7 @@ for key, item in mcqs.items():
     user_answer = input("Enter your answer (A/B/C/D): ").upper()
     
     if user_answer == item["answer"]:
-        print("Correct! 🎉")
+        print("Correct! ")
         user_point += 1
     else:
         print("Wrong! The correct answer was", item["answer"])
