@@ -74,7 +74,7 @@ while True:
 
     # 2. Check if item is in stock
     elif store_items[user_input]["quantity"] > 0:
-        cart.append(user_input)  # Store item name string
+        cart.append(user_input)   #Store item name string
         store_items[user_input]["quantity"] -= 1
         total += store_items[user_input]["price"]
         print(f"Added {user_input.capitalize()} to cart!")
