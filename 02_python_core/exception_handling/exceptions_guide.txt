@@ -1,0 +1,214 @@
+================================================================================
+           PYTHON EXCEPTION HANDLING GUIDE: DEFINITIONS, ERRORS & USAGE
+================================================================================
+
+1. WHAT IS EXCEPTION HANDLING?
+--------------------------------------------------------------------------------
+In Python, an EXCEPTION is an error that occurs during the execution of a program (at runtime).
+When an exception occurs, Python stops the execution of the program and generates an error message.
+
+Exception Handling is a mechanism to catch and handle runtime errors so that the program does not crash ungracefully.
+
+
+2. THE `try-except-else-finally` CONTROL FLOW DEFINITIONS
+--------------------------------------------------------------------------------
+- try      : Contains code that might raise an exception. Python attempts to run this block.
+- except   : Executes ONLY IF a specific exception occurs inside the `try` block.
+- else     : Executes ONLY IF NO exceptions occurred in the `try` block.
+- finally  : Executes ALWAYS, regardless of whether an exception occurred or not (used for cleanup).
+- raise    : Manually triggers/raises an exception when a specific condition is met.
+
+
+3. ALL MAJOR BUILT-IN PYTHON EXCEPTIONS (DEFINITIONS & WHEN THEY OCCUR)
+--------------------------------------------------------------------------------
+
+[1] ZeroDivisionError
+---------------------
+- Definition : Raised when the second argument of a division or modulo operation is zero.
+- When it occurs : When you try to divide any number by 0 (e.g. 10 / 0 or 15 % 0).
+- Example:
+    try:
+        result = 10 / 0
+    except ZeroDivisionError:
+        print("Cannot divide by zero!")
+
+[2] ValueError
+--------------
+- Definition : Raised when an operation/function receives an argument of the right data type but an inappropriate value.
+- When it occurs : When converting string to integer (`int("abc")`), unpacking wrong number of values, or mathematical Domain Errors (`math.sqrt(-1)`).
+- Example:
+    try:
+        num = int("hello")
+    except ValueError:
+        print("Invalid number string!")
+
+[3] TypeError
+-------------
+- Definition : Raised when an operation or function is applied to an object of an inappropriate type.
+- When it occurs : Adding a string and an integer (`"Age: " + 25`), calling an uncallable object, indexing a non-sequence type.
+- Example:
+    try:
+        result = "Hello" + 5
+    except TypeError:
+        print("Cannot concatenate string and integer!")
+
+[4] KeyError
+------------
+- Definition : Raised when a mapping (dictionary) key is not found in the set of existing keys.
+- When it occurs : Looking up a non-existent key in a dictionary without using `.get()`.
+- Example:
+    user = {"name": "Aman"}
+    try:
+        role = user["role"]
+    except KeyError:
+        print("Key 'role' does not exist in dictionary!")
+
+[5] IndexError
+--------------
+- Definition : Raised when a sequence subscript (list, tuple, string) index is out of range.
+- When it occurs : Trying to access element at index 5 when list has only 3 items (`lst[5]`).
+- Example:
+    fruits = ["Apple", "Banana"]
+    try:
+        item = fruits[5]
+    except IndexError:
+        print("Index is out of range!")
+
+[6] FileNotFoundError
+---------------------
+- Definition : Raised when a file or directory is requested but cannot be found on the disk.
+- When it occurs : Opening a non-existent file in read mode (`open("missing.txt", "r")`).
+- Example:
+    try:
+        with open("missing.txt", "r") as f:
+            data = f.read()
+    except FileNotFoundError:
+        print("File was not found!")
+
+[7] AttributeError
+------------------
+- Definition : Raised when an attribute reference or assignment fails because the object doesn't have that method/attribute.
+- When it occurs : Calling a string method on an integer (`x = 10; x.lower()`) or accessing non-existent variable on an object.
+- Example:
+    try:
+        number = 100
+        number.append(5)
+    except AttributeError:
+        print("Integers do not have an append method!")
+
+[8] NameError
+-------------
+- Definition : Raised when a local or global variable name is not found/defined.
+- When it occurs : Using a variable before assigning a value to it or misspelling a variable name.
+- Example:
+    try:
+        print(total_score)
+    except NameError:
+        print("Variable 'total_score' is not defined!")
+
+[9] ModuleNotFoundError / ImportError
+--------------------------------------
+- Definition : Raised when an `import` statement fails to find or load a module/package.
+- When it occurs : Importing a library that is not installed or misspelling the module name (`import non_existent_pkg`).
+- Example:
+    try:
+        import non_existent_pkg
+    except ModuleNotFoundError:
+        print("Package is not installed!")
+
+[10] UnboundLocalError
+----------------------
+- Definition : Subclass of NameError; raised when a reference is made to a local variable within a function, but no value has been bound to it.
+- When it occurs : Modifying a global variable inside a function without declaring `global`.
+- Example:
+    x = 10
+    def update():
+        # x = x + 1  # Triggers UnboundLocalError
+        pass
+
+[11] SyntaxError & IndentationError
+------------------------------------
+- Definition : Raised when Python parser encounters incorrect syntax or improper spacing/tabs.
+- When it occurs : Missing colons, unbalanced parentheses, or wrong indentation.
+- Note : SyntaxErrors happen at COMPILE TIME (before code runs), so they CANNOT be caught with standard `try-except` blocks.
+
+[12] StopIteration
+------------------
+- Definition : Raised by built-in function `next()` to signal that there are no further items produced by the iterator.
+- When it occurs : Calling `next()` on an exhausted iterator.
+- Example:
+    it = iter([1, 2])
+    next(it); next(it)
+    try:
+        next(it)
+    except StopIteration:
+        print("Reached end of iterator!")
+
+[13] RecursionError
+-------------------
+- Definition : Raised when the maximum recursion depth is exceeded (default is usually 1000 in Python).
+- When it occurs : Calling a recursive function without a proper base case, leading to infinite recursion.
+- Example:
+    def infinite_loop():
+        return infinite_loop()
+
+[14] MemoryError
+----------------
+- Definition : Raised when an operation runs out of memory (RAM).
+- When it occurs : Trying to create an impossibly large array or structure that exceeds available memory.
+
+[15] OverflowError
+------------------
+- Definition : Raised when the result of an arithmetic operation is too large to be represented.
+- When it occurs : Floating-point operations exceeding maximum float bounds (`math.exp(1000)`).
+
+[16] AssertionError
+-------------------
+- Definition : Raised when an `assert` statement fails (expression evaluates to `False`).
+- When it occurs : Used for debugging when `assert condition, "Error message"` evaluates to `False`.
+- Example:
+    try:
+        assert 5 == 10, "5 is not equal to 10"
+    except AssertionError as e:
+        print(f"Assertion failed: {e}")
+
+[17] PermissionError
+--------------------
+- Definition : Subclass of OSError; raised when trying to run an operation without adequate access permissions.
+- When it occurs : Writing to a read-only file or restricted system directory.
+
+[18] KeyboardInterrupt
+----------------------
+- Definition : Raised when the user hits the interrupt key (normally Control-C or Delete).
+- When it occurs : Manually interrupting a running Python script in the terminal.
+
+[19] Exception (Base Class)
+---------------------------
+- Definition : The base class for almost all standard built-in exceptions.
+- When it occurs : Used as a catch-all block `except Exception as e:` to handle any unexpected error.
+
+
+4. SUMMARY CHEAT SHEET FOR `try-except` BLOCKS
+--------------------------------------------------------------------------------
+Pattern:
+
+    try:
+        # Code to attempt
+        val = int(input("Enter number: "))
+        res = 10 / val
+    except ValueError:
+        # Executes if input is not a number
+        print("Invalid number!")
+    except ZeroDivisionError:
+        # Executes if input is 0
+        print("Division by zero!")
+    except Exception as e:
+        # Catches any other unexpected error
+        print(f"An unexpected error occurred: {e}")
+    else:
+        # Executes if NO error occurred
+        print(f"Calculation successful: {res}")
+    finally:
+        # ALWAYS executes
+        print("Execution complete.")
+================================================================================
