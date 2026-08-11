@@ -1,91 +1,116 @@
-# Python + Web Development: Your Six-Month Path
+# 🚀 Python + Web Development: Your 3-Month Mastery Path
 
-This folder is your practice space. Begin small, write code every day, and build one finished mini-project each month.
+Welcome to your practice space! This repository tracks daily progress, hands-on coding exercises, and real-world mini-projects.
 
-## A simple weekly routine
+---
 
-- Study 5 days a week for 60–90 minutes.
-- Spend about 30 minutes learning, then 30–60 minutes typing, changing, and debugging code yourself.
-- Keep one day for revision and one day off.
-- Do not copy projects blindly: first try, then look up hints, then improve your own version.
+## 💡 The Golden Rules for Success
+- 📅 **Consistency over Speed**: Study 5 days a week for **60–90 minutes**.
+- ⏱️ **Split Your Time**: 30 mins learning ➔ 30–60 mins typing, experimenting & debugging code.
+- 🔄 **Rest & Revise**: 1 day for weekly revision + 1 day completely off.
+- 🧠 **Code It Yourself**: First try solving without hints, look up help when stuck, and then rebuild in your own style!
 
-## Set up once (Week 1)
+---
 
-1. Install the latest Python 3 from [python.org](https://www.python.org/downloads/). During installation, tick **Add Python to PATH**.
-2. Install [Visual Studio Code](https://code.visualstudio.com/) and its **Python** extension.
-3. In VS Code, open this `pythonbasics` folder.
-4. Open the terminal and verify the installation with `python --version`.
-5. Run a file with `python filename.py`.
+## 🛠️ Environment Setup (Week 1)
+- [x] Install Python 3 & check **Add Python to PATH**
+- [x] Install Visual Studio Code & Python Extension
+- [x] Open `pythonbasics` workspace in VS Code
+- [x] Verify setup in terminal using `python --version`
+- [x] Practice executing Python scripts via `python filename.py`
 
-## Roadmap
+---
 
-### Month 1 — Python foundations
+## 🗺️ 3-Month Learning Roadmap & Progress Checklist
 
-Learn: `print`, variables, strings, numbers, input, operators, `if`/`elif`/`else`, loops, functions, and basic debugging.
+### 🟦 Month 1 — Python Foundations (`01_python_fundamentals`)
+*Goal: Master fundamental programming concepts, control flow, functions, and data structures.*
 
-Work in `01_python_fundamentals`.
+#### **Topic Checklist:**
+- [x] `print()` Statements & Output Formatting
+- [x] Variables & Data Types (Strings, Integers, Floats, Booleans)
+- [x] User Input (`input()`) & Type Casting (`int()`, `float()`)
+- [x] Arithmetic, Comparison & Logical Operators
+- [x] Conditional Logic (`if` / `elif` / `else`)
+- [x] For Loops (`for i in range(...)` & sequence iteration)
+- [x] While Loops (`while` condition, `break`, `continue`)
+- [x] Functions (`def`, arguments, parameters, `return` values)
+- [x] Lists & Operations (`.append()`, `.pop()`, slicing, indexing)
+- [x] Dictionaries & Key-Value Iteration (`.items()`, `.get()`)
+- [x] String Methods (`.strip()`, `.lower()`, `.upper()`, `.split()`)
 
-Build: calculator, number guessing game, unit converter, and a simple quiz.
+#### **Month 1 Mini Projects Completed:**
+- [x] 🧮 **Calculator with Functions** (`11_calculator_with_functions.py`)
+- [x] 🎲 **Number Guessing Game** (`20_number_guessing_game.py`)
+- [x] ❓ **Interactive Quiz App** (`21_simple_quiz.py`)
+- [x] 🛒 **Shopping Cart System** (`22_shopping_cart.py`)
+- [x] 🎓 **Student Gradebook System** (`23_student_gradebook.py`)
 
-### Month 2 — Core Python and problem solving
+---
 
-Learn: lists, tuples, dictionaries, sets, string methods, file reading/writing, exceptions, modules, and virtual environments.
+### 🟨 Month 2 — Core Python & File Handling (`02_python_core` & `03_problem_solving`)
+*Goal: Work with disk files, handle errors gracefully, build modular scripts, and practice problem solving.*
 
-Work in `02_python_core` and `03_problem_solving`.
+#### **Topic Checklist:**
+- [x] File Handling — Writing Files (`'w'` mode, `with open(...) as file:`)
+- [x] File Handling — Reading Files (`'r'` mode, `read()`, `readline()`, `readlines()`, `enumerate()`, `.strip()`)
+- [x] File Handling — Appending Files (`'a'` mode, persistent logging)
+- [x] `datetime` Module for Real-time Timestamps
+- [x] Exception Handling Basics (`try`, `except`, `else`, `finally`)
+- [x] Built-in Exception Types (`ZeroDivisionError`, `ValueError`, `TypeError`, `KeyError`, `IndexError`, `FileNotFoundError`)
+- [x] Clean Code Architecture & Modular File Notes
+- [ ] Data Structures Deep-Dive (Tuples, Sets)
+- [ ] Modules, Packages & Virtual Environments (`venv`)
+- [ ] Advanced Problem Solving & Algorithm Logic
 
-Build: contact book saved in a file, to-do list, password generator, and expense tracker (terminal version).
+#### **Month 2 Mini Projects Completed:**
+- [x] 📝 **Safe File Writer & Reader** (`01_write`, `02_read`)
+- [x] 📓 **Daily Task Logger & Mini Journal App** (`03_append/03_journal_app.py`)
+- [x] 🛡️ **Safe Exception Handler Suite** (`exception_handling/`)
+- [ ] 📇 **Terminal Contact Book** (Saved to persistent file)
+- [ ] 🔐 **Password Generator & Expense Tracker**
 
-### Month 3 — HTML and CSS
+---
 
-Learn: HTML structure, headings, links, images, forms, semantic tags, CSS selectors, box model, Flexbox, Grid, responsive design, and Git basics.
+### 🟩 Month 3 — HTML, CSS & Web Fundamentals (`04_html_css`)
+*Goal: Learn web page structuring, modern styling with Flexbox & Grid, responsive design, and version control.*
 
-Work in `04_html_css`.
+#### **Topic Checklist:**
+- [ ] HTML5 Semantic Structure (`<header>`, `<nav>`, `<main>`, `<article>`, `<footer>`)
+- [ ] Text Formatting, Headings, Links & Images
+- [ ] HTML Forms & User Inputs (`<input>`, `<select>`, `<button>`, `<form>`)
+- [ ] CSS Selectors, Colors, Fonts & Box Model (Margin, Border, Padding)
+- [ ] Modern Layouts with Flexbox (`display: flex`, alignment, flex-wrap)
+- [ ] Responsive Layouts with CSS Grid & Media Queries (`@media`)
+- [ ] Git & GitHub Version Control Best Practices (`git status`, `add`, `commit`, `push`)
 
-Build: personal profile page, college-club landing page, and responsive portfolio homepage.
+#### **Month 3 Mini Projects:**
+- [ ] 👤 **Personal Profile & Bio Page**
+- [ ] 🌐 **College / Club Landing Page**
+- [ ] 🎨 **Responsive Portfolio Homepage**
 
-### Month 4 — JavaScript and browser programming
+---
 
-Learn: JavaScript variables, functions, arrays, objects, DOM selection, events, form validation, local storage, and `fetch` basics.
+## 📚 Recommended Resources
+- 🐍 **Python**: [Official Python Docs](https://docs.python.org/3/tutorial/) | freeCodeCamp | CS50P
+- 🌐 **Web Development**: [MDN Web Docs](https://developer.mozilla.org/)
+- 💻 **Problem Solving**: HackerRank & Exercism
 
-Work in `05_javascript`.
+---
 
-Build: interactive to-do list, quiz app, calculator, or weather-page UI (use an API only after the interface works).
+## 📁 Repository Structure
+```text
+pythonbasics/
+│
+├── 01_python_fundamentals/   # Basics, Loops, Functions, Lists & Dicts
+├── 02_python_core/           # File Handling (Write, Read, Append) & Exceptions
+│   ├── 01_write/             # Writing files ('w' mode)
+│   ├── 02_read/              # Reading files ('r' mode)
+│   ├── 03_append/            # Appending files ('a' mode)
+│   └── exception_handling/   # Try-Except-Else-Finally practice & guides
+├── 03_problem_solving/       # Logic building & algorithmic challenges
+└── 04_html_css/              # HTML5, CSS3 & Responsive Web Design
+```
 
-### Month 5 — Python web development with Flask
-
-Learn: HTTP basics, Flask routes, templates (Jinja), forms, static files, SQLite, CRUD (create/read/update/delete), and environment variables.
-
-Work in `06_flask_web`.
-
-Build: a task manager or student-notes web app with an SQLite database.
-
-### Month 6 — Portfolio project and deployment
-
-Learn: project structure, Git/GitHub workflow, README writing, testing basics, security fundamentals (never commit passwords), deployment, and interview-style revision.
-
-Work in `07_capstone`.
-
-Build: one polished project such as a study planner, expense tracker, or college event manager. It should have login only if you have time; good CRUD features and clean documentation matter more.
-
-## Suggested resources
-
-- Python: [Official Python tutorial](https://docs.python.org/3/tutorial/), freeCodeCamp, or CS50P.
-- HTML/CSS/JavaScript: [MDN Web Docs](https://developer.mozilla.org/).
-- Flask: [Official Flask tutorial](https://flask.palletsprojects.com/).
-- Practice: HackerRank Python or Exercism. Solve easy problems; understand each solution.
-
-## How to use these folders
-
-Create a new numbered file for each exercise, for example `01_variables.py` or `02_guessing_game.py`. Put a short comment at the top saying what you learned. Keep finished mini-projects in their own subfolder.
-
-## First seven days
-
-1. Install Python and VS Code; run `hello.py`.
-2. Variables, input, strings, and simple calculator.
-3. Conditions; build an even/odd and grade checker.
-4. `for` and `while` loops; multiplication table and number guessing game.
-5. Functions; split your calculator into functions.
-6. Lists and dictionaries; make a small student-mark list.
-7. Review everything and rebuild one program without looking at old code.
-
-Your first goal is consistency, not speed. If a topic feels difficult, spend another day on it and keep moving.
+---
+*Keep coding every day — consistency builds mastery! 🚀*
