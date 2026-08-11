@@ -1,0 +1,101 @@
+================================================================================
+            EXCEPTION HANDLING NOTES & PRACTICE INSTRUCTIONS
+================================================================================
+
+1. TOPIC: EXCEPTION HANDLING IN PYTHON (CORE PYTHON)
+--------------------------------------------------------------------------------
+Key Concepts:
+- What is an Exception?
+  An error that occurs while a program is running, causing Python to crash.
+
+Common Built-in Exceptions:
+- ValueError       : Triggered when a function receives an argument of right type but wrong value (e.g. `int("abc")`).
+- ZeroDivisionError: Triggered when dividing any number by zero (e.g. `10 / 0`).
+- FileNotFoundError: Triggered when trying to open a file that doesn't exist.
+- KeyError         : Triggered when searching for a dictionary key that isn't present.
+- IndexError       : Triggered when accessing a list index out of range.
+
+
+2. STRUCTURE OF `try-except-else-finally`
+--------------------------------------------------------------------------------
+    try:
+        # Code that might crash
+    except SpecificError:
+        # Code that runs IF that specific error happens
+    else:
+        # Code that runs ONLY IF NO error happened
+    finally:
+        # Code that ALWAYS runs, no matter what!
+
+
+3. DEMONSTRATION EXAMPLES
+--------------------------------------------------------------------------------
+Example 1: Safe integer input handling
+    try:
+        age = int(input("Enter your age: "))
+        print(f"Next year you will be {age + 1}")
+    except ValueError:
+        print("❌ Invalid input! Please enter a numeric integer.")
+    else:
+        print("✅ Age recorded successfully!")
+    finally:
+        print("Process finished.\n")
+
+Example 2: Safe File Reading
+    try:
+        with open("non_existent_file.txt", "r") as file:
+            content = file.read()
+    except FileNotFoundError:
+        print("⚠️ File was not found! Check your filename.")
+
+
+4. SUMMARY NOTES FOR REVISION
+--------------------------------------------------------------------------------
+Why use Exception Handling?
+- Prevents your program from crashing ungracefully when bad input or missing files occur.
+- Provides clear, helpful error messages to the user.
+
+`try` vs `except` vs `else` vs `finally`:
+- `try`     : Test a block of code for errors.
+- `except`  : Handle specific errors. (Never use bare `except:` without error types!).
+- `else`    : Executes if the try block succeeded without any errors.
+- `finally` : Executes always, regardless of success or errors (ideal for cleanup).
+
+
+5. PRACTICE TASKS & PROBLEMS
+--------------------------------------------------------------------------------
+
+[Basics Tasks]
+Problem Statement: Create two safe functions to handle division and file reading without crashing!
+- Task 1: Create `safe_divide(a, b)`:
+    - Wrap division `result = a / b` in `try-except`.
+    - Catch `ZeroDivisionError` -> "❌ Error: Cannot divide by zero!"
+    - Catch `TypeError` -> "❌ Error: Inputs must be numbers!"
+    - If success (`else`) -> print result.
+- Task 2: Create `safe_read(file_path)`:
+    - Wrap opening/reading file in `try-except`.
+    - Catch `FileNotFoundError` -> "❌ Error: The file '{file_path}' does not exist!"
+    - If success, print file content cleaned with `.strip()`.
+
+[Advanced Practice Tasks]
+- Task 1: Safe Dictionary Lookup (`safe_get_user_role(username)`):
+    - User Database dictionary: `user_roles = {"aman": "Admin", "priya": "Developer", "rahul": "Tester"}`
+    - Try looking up `role = user_roles[username.lower()]`
+    - Catch `KeyError` -> print "❌ Error: User '{username}' was not found in the database!"
+    - If success (`else`) -> print "✅ User '{username}' has role: {role}"
+
+- Task 2: Safe List Element Access (`safe_get_fruit(index)`):
+    - List: `fruits = ["Apple", "Banana", "Cherry", "Mango"]`
+    - Try getting `fruit = fruits[index]`
+    - Catch `IndexError` -> print out of range message.
+    - Catch `TypeError` -> print index must be integer.
+    - If success (`else`) -> print fruit.
+    - `finally` -> print completion message.
+
+- Task 3: Safe Age Calculator (`safe_calculate_birth_year(age_input)`):
+    - Current Year: 2026
+    - Try converting `age = int(age_input)` and calculate `birth_year = 2026 - age`
+    - Catch `ValueError` -> print invalid age message.
+    - If success (`else`) -> print birth year.
+    - `finally` -> print "--- Age check complete ---"
+================================================================================
