@@ -2,6 +2,8 @@
 
 Welcome to your practice space! This repository tracks daily progress, hands-on coding exercises, and real-world mini-projects.
 
+> 📖 **Full 6-Month Course Path**: For the original complete 6-month roadmap, setup guide, and resource directory, view [ROADMAP.md](file:///d:/Aman/pythonbasics/ROADMAP.md).
+
 ---
 
 ## 💡 The Golden Rules for Success
